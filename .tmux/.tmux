@@ -1,0 +1,1 @@
+/home/rto/repos/dotfiles/dotconf/.tmux
