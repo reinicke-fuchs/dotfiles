@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
+local helpers = dofile(wezterm.config_dir .. "\\keys.lua")
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	  -- If you want static names per index:
@@ -200,7 +201,7 @@ wezterm.on("session", function(window, pane, args)
     wezterm.log_error("Unknown session subcommand: " .. tostring(subcmd))
   end
 end)
-
+config.disable_default_key_bindings = true
 config.keys = {
     {
 	    key = 'r',
